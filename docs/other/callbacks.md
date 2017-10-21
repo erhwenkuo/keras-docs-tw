@@ -182,7 +182,7 @@ keras.callbacks.CSVLogger(filename, separator=',', append=False)
 
 - fiename：保存的csv文件名，如`run/log.csv`
 - separator：字符串，csv分隔符
-- append：默認為False，為True時csv文件如果存在則繼續寫入，為False時總是覆蓋csv文件
+- append：預設為False，為True時csv文件如果存在則繼續寫入，為False時總是覆蓋csv文件
 
 
 ## LambdaCallback

@@ -176,7 +176,7 @@ get_file(fname, origin, untar=False, md5_hash=None, file_hash=None, cache_subdir
 
 從給定的URL中下載文件, 可以傳遞MD5值用於數據校驗(下載後或已經緩存的數據均可)
 
-默認情況下文件會被下載到`~/.keras`中的`cache_subdir`文件夾，並將其文件名設為`fname`，因此例如一個文件`example.txt`最終將會被存放在`~ /.keras/datasets/example.txt~
+預設情況下文件會被下載到`~/.keras`中的`cache_subdir`文件夾，並將其文件名設為`fname`，因此例如一個文件`example.txt`最終將會被存放在`~ /.keras/datasets/example.txt~
 
 tar,tar.gz.tar.bz和zip格式的文件可以被提取，提供哈希碼可以在下載後校驗文件。命令喊程序`shasum`和`sha256sum`可以計算哈希值。
 
@@ -193,9 +193,9 @@ tar,tar.gz.tar.bz和zip格式的文件可以被提取，提供哈希碼可以在
 
 * cache_subdir: 用於緩存數據的文件夾，若指定絕對路徑`/path/to/folder`則將存放在該路徑下。
 
-* hash_algorithm: 選擇文件校驗的哈希算法，可選項有'md5', 'sha256', 和'auto'. 默認'auto'自動檢測使用的哈希算法
+* hash_algorithm: 選擇文件校驗的哈希算法，可選項有'md5', 'sha256', 和'auto'. 預設'auto'自動檢測使用的哈希算法
 * extract: 若為True則試圖提取文件，例如tar或zip tries extracting the file as an Archive, like tar or zip.
-* archive_format: 試圖提取的文件格式，可選為'auto', 'tar', 'zip', 和None. 'tar' 包括tar, tar.gz, tar.bz文件. 默認'auto'是['tar ', 'zip']. None或空列表將返回沒有匹配。
+* archive_format: 試圖提取的文件格式，可選為'auto', 'tar', 'zip', 和None. 'tar' 包括tar, tar.gz, tar.bz文件. 預設'auto'是['tar ', 'zip']. None或空列表將返回沒有匹配。
 * cache_dir: 緩存文件存放地在，參考[FAQ](for_beginners/FAQ/#where_config)
 ### 返回值
 

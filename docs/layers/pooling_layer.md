@@ -10,7 +10,7 @@ keras.layers.pooling.MaxPooling1D(pool_size=2, strides=None, padding='valid')
 
 * pool_size：整數，池化窗口大小
 
-* strides：整數或None，下採樣因子，例如設2將會使得輸出shape為輸入的一半，若為None則默認值為pool_size。
+* strides：整數或None，下採樣因子，例如設2將會使得輸出shape為輸入的一半，若為None則預設值為pool_size。
 
 * padding：‘valid’或者‘same’
 
@@ -39,7 +39,7 @@ keras.layers.pooling.MaxPooling2D(pool_size=(2, 2), strides=None, padding='valid
 * border_mode：‘valid’或者‘same’
 
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 ### 輸入shape
 
@@ -71,7 +71,7 @@ keras.layers.pooling.MaxPooling3D(pool_size=(2, 2, 2), strides=None, padding='va
 
 * padding：‘valid’或者‘same’
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表數據的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128x128的數據為例，“channels_first”應將數據組織為（3,128,128,128），而“channels_last”應將數據組織為（128,128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表數據的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128x128的數據為例，“channels_first”應將數據組織為（3,128,128,128），而“channels_last”應將數據組織為（128,128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 ### 輸入shape
 
@@ -97,7 +97,7 @@ keras.layers.pooling.AveragePooling1D(pool_size=2, strides=None, padding='valid'
 
 * pool_size：整數，池化窗口大小
 
-* strides：整數或None，下採樣因子，例如設2將會使得輸出shape為輸入的一半，若為None則默認值為pool_size。
+* strides：整數或None，下採樣因子，例如設2將會使得輸出shape為輸入的一半，若為None則預設值為pool_size。
 
 * padding：‘valid’或者‘same’
 
@@ -126,7 +126,7 @@ keras.layers.pooling.AveragePooling2D(pool_size=(2, 2), strides=None, padding='v
 * border_mode：‘valid’或者‘same’
 
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 ### 輸入shape
 
@@ -158,7 +158,7 @@ keras.layers.pooling.AveragePooling3D(pool_size=(2, 2, 2), strides=None, padding
 
 * padding：‘valid’或者‘same’
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表數據的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128x128的數據為例，“channels_first”應將數據組織為（3,128,128,128），而“channels_last”應將數據組織為（128,128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表數據的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128x128的數據為例，“channels_first”應將數據組織為（3,128,128,128），而“channels_last”應將數據組織為（128,128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 ‘channels_first’模式下，為形如（samples, channels, len_pool_dim1, len_pool_dim2, len_pool_dim3）的5D張量
 
@@ -211,7 +211,7 @@ keras.layers.pooling.GlobalMaxPooling2D(dim_ordering='default')
 
 ### 參數
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 ### 輸入shape
 
@@ -233,7 +233,7 @@ keras.layers.pooling.GlobalAveragePooling2D(dim_ordering='default')
 
 ### 參數
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 ### 輸入shape
 

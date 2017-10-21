@@ -23,7 +23,7 @@
 
 3. None，代表你的類繼承自```KerasClassifier```或```KerasRegressor```，其```call```方法為其父類的```call```方法
 
-```sk_params```以模型參數和訓練（超）參數作為參數。合法的模型參數為```build_fn```的參數。注意，‘build_fn’應提供其參數的默認值。所以我們不傳遞任何值給```sk_params```也可以創建一個分類器/回歸器
+```sk_params```以模型參數和訓練（超）參數作為參數。合法的模型參數為```build_fn```的參數。注意，‘build_fn’應提供其參數的預設值。所以我們不傳遞任何值給```sk_params```也可以創建一個分類器/回歸器
 
 ```sk_params```還接受用於調用```fit```，```predict```，```predict_proba```和```score```方法的參數，如`` `nb_epoch```，```batch_size```等。這些用於訓練或預測的參數按如下順序選擇：
 
@@ -31,6 +31,6 @@
 
 2. 傳遞個```sk_params```的參數
 
-3. ```keras.models.Sequential```，```fit```，```predict```，```predict_proba```和```score```的默認值
+3. ```keras.models.Sequential```，```fit```，```predict```，```predict_proba```和```score```的預設值
 
 當使用scikit-learn的```grid_search```接口時，合法的可轉換參數是你可以傳遞給```sk_params```的參數，包括訓練參數。即，你可以使用```grid_search```來搜索最佳的```batch_size```或```nb_epoch```以及其他模型參數

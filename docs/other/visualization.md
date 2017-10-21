@@ -11,8 +11,8 @@ plot_model(model, to_file='model.png')
 
 ```plot_model```接收兩個可選參數：
 
-* ```show_shapes```：指定是否顯示輸出數據的形狀，默認為```False```
-* ```show_layer_names```:指定是否顯示層名稱,默認為```True```
+* ```show_shapes```：指定是否顯示輸出數據的形狀，預設為```False```
+* ```show_layer_names```:指定是否顯示層名稱,預設為```True```
 
 我們也可以直接獲取一個```pydot.Graph```對象，然後按照自己的需要配置它，例如，如果要在ipython中展示圖片
 ```python

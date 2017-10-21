@@ -13,7 +13,7 @@ sgd = optimizers.SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='mean_squared_error', optimizer=sgd)
 ```
 
-可以在調用```model.compile()```之前初始化一個優化器對象，然後傳入該函數（如上所示），也可以在調用```model.compile()```時傳遞一個預定義優化器名。在後者情形下，優化器的參數將使用默認值。
+可以在調用```model.compile()```之前初始化一個優化器對象，然後傳入該函數（如上所示），也可以在調用```model.compile()```時傳遞一個預定義優化器名。在後者情形下，優化器的參數將使用預設值。
 ```python
 # pass optimizer by name: default parameters will be used
 model.compile(loss='mean_squared_error', optimizer='sgd')
@@ -58,7 +58,7 @@ keras.optimizers.SGD(lr=0.01, momentum=0.0, decay=0.0, nesterov=False)
 ```python
 keras.optimizers.RMSprop(lr=0.001, rho=0.9, epsilon=1e-06)
 ```
-除學習率可調整外，建議保持優化器的其他默認參數不變
+除學習率可調整外，建議保持優化器的其他預設參數不變
 
 該優化器通常是面對遞歸神經網絡時的一個良好選擇
 
@@ -76,7 +76,7 @@ keras.optimizers.RMSprop(lr=0.001, rho=0.9, epsilon=1e-06)
 ```python
 keras.optimizers.Adagrad(lr=0.01, epsilon=1e-06)
 ```
-建議保持優化器的默認參數不變
+建議保持優化器的預設參數不變
 
 ### Adagrad
 
@@ -90,7 +90,7 @@ keras.optimizers.Adagrad(lr=0.01, epsilon=1e-06)
 ```python
 keras.optimizers.Adadelta(lr=1.0, rho=0.95, epsilon=1e-06)
 ```
-建議保持優化器的默認參數不變
+建議保持優化器的預設參數不變
 
 ### 參數
 
@@ -111,7 +111,7 @@ keras.optimizers.Adadelta(lr=1.0, rho=0.95, epsilon=1e-06)
 keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
 ```
 
-該優化器的默認值來源於參考文獻
+該優化器的預設值來源於參考文獻
 
 ### 參數
 
@@ -134,7 +134,7 @@ keras.optimizers.Adamax(lr=0.002, beta_1=0.9, beta_2=0.999, epsilon=1e-08)
 
 Adamax優化器來自於Adam的論文的Section7，該方法是基於無窮範數的Adam方法的變體。
 
-默認參數由論文提供
+預設參數由論文提供
 
 ### 參數
 
@@ -158,7 +158,7 @@ keras.optimizers.Nadam(lr=0.002, beta_1=0.9, beta_2=0.999, epsilon=1e-08, schedu
 
 Nesterov Adam optimizer: Adam本質上像是帶有動量項的RMSprop，Nadam就是帶有Nesterov 動量的Adam RMSprop
 
-默認參數來自於論文，推薦不要對默認參數進行更改。
+預設參數來自於論文，推薦不要對預設參數進行更改。
 
 ### 參數
 

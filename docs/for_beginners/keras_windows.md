@@ -1,16 +1,16 @@
-*這裡需要說明一下，筆者**不建議在Windows環境下進行深度學習的研究**，一方面是因為Windows所對應的框架搭建的依賴過多，社區設定不完全；另一方面，Linux系統下對顯卡支持、內存釋放以及存儲空間調整等硬件功能支持較好。如果您對Linux環境感到陌生，並且大多數開發環境在Windows下更方便操作的話，希望這篇文章對您會有幫助。 *
+*這裡需要說明一下，筆者**不建議在Windows環境下進行深度學習的研究**，一方面是因為Windows所對應的框架搭建的依賴過多，社區設定不完全；另一方面，Linux系統下對顯卡支持、記憶體釋放以及存儲空間調整等硬體功能支持較好。如果您對Linux環境感到陌生，並且大多數開發環境在Windows下更方便操作的話，希望這篇文章對您會有幫助。 *
 
 
-**由於Keras默認以Tensorflow為後端，且Theano後端更新緩慢，本文默認採用Tensorflow1.0作為Keras後端，Theano版安裝方式請訪問[www.scp-173.top**](http:/ /www.scp-173.top)
+**由於Keras預設以Tensorflow為後端，且Theano後端更新緩慢，本文預設採用Tensorflow1.0作為Keras後端，Theano版安裝方式請訪問[www.scp-173.top**](http:/ /www.scp-173.top)
 
 ---
-# 關於計算機的硬件配置說明
+# 關於主機的硬體配置說明
 ## **推薦配置**
 如果您是高校學生或者高級研究人員，並且實驗室或者個人資金充沛，建議您採用如下配置：
 
  - 主板：X299型號或Z270型號
  - CPU: i7-6950X或i7-7700K 及其以上高級型號
- - 內存：品牌內存，總容量32G以上，根據主板組成4通道或8通道
+ - 記憶體：品牌記憶體，總容量32G以上，根據主板組成4通道或8通道
  - SSD： 品牌固態硬盤，容量256G以上
  - <font color=#FF0000>顯卡：NVIDIA GTX TITAN(XP) NVIDIA GTX 1080ti、NVIDIA GTX TITAN、NVIDIA GTX 1080、NVIDIA GTX 1070、NVIDIA GTX 1060 (順序為優先建議，並且建議同一顯卡，可以根據主板插槽數量購買多塊，例如X299型號主板最多可以採用×4的顯卡)</font>
  - 電源：由主機機容量的確定，一般有顯卡總容量後再加200W即可
@@ -18,7 +18,7 @@
 如果您是僅僅用於自學或代碼調試，亦或是條件所限僅採用自己現有的設備進行開發，那麼您的電腦至少滿足以下幾點：
 
  - CPU：Intel第三代i5和i7以上系列產品或同性能AMD公司產品
- - 內存：總容量4G以上
+ - 記憶體：總容量4G以上
 
 ## <font color=#FF0000>CPU說明</font>
  - 大多數CPU目前支持多核多線程，那麼如果您採用CPU加速，就可以使用多線程運算。這方面的優勢對於服務器CPU志強系列尤為關鍵
@@ -70,7 +70,7 @@ CUDA Toolkit是NVIDIA公司面向GPU編程提供的基礎工具包，也是驅�
 ## 6. 加速庫CuDNN
 從官網下載需要註冊 Nvidia 開發者賬號，網盤搜索一般也能找到。
 Windows目前最新版v6.0，但是keras尚未支持此版本，請下載v5.1版本，即 cudnn-8.0-win-x64-v5.1.zip。
-下載解壓出來是名為cuda的文件夾，裡面有bin、include、lib，將三個文件夾複製到安裝CUDA的地方覆蓋對應文件夾，默認文件夾在：`C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\8.0`
+下載解壓出來是名為cuda的文件夾，裡面有bin、include、lib，將三個文件夾複製到安裝CUDA的地方覆蓋對應文件夾，預設文件夾在：`C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\8.0`
 
 ---
 

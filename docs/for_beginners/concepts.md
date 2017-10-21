@@ -55,7 +55,7 @@ print sum1
 
 而TensorFlow，的表達形式是（100,16,32,3），即把通道維放在了最後，這種數據組織方式稱為“channels_last”。
 
-Keras默認的數據組織形式在~/.keras/keras.json中規定，可查看該文件的`image_data_format`一項查看，也可在代碼中通過K.image_data_format()函數返回，請在網絡的訓練和測試中保持維度順序一致。
+Keras預設的數據組織形式在~/.keras/keras.json中規定，可查看該文件的`image_data_format`一項查看，也可在代碼中通過K.image_data_format()函數返回，請在網絡的訓練和測試中保持維度順序一致。
 
 唉，真是蛋疼，你們商量好不行嗎？
 

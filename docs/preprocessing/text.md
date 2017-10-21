@@ -13,7 +13,7 @@ keras.preprocessing.text.text_to_word_sequence(text,
 
 * text：字符串，待處理的文本
 
-* filters：需要濾除的字符的列表或連接形成的字符串，例如標點符號。默認值為'!"#$%&()*+,-./:;<=>?@[\]^_`{|}~\t\n'，包含標點符號，製表符和換行符等
+* filters：需要濾除的字符的列表或連接形成的字符串，例如標點符號。預設值為'!"#$%&()*+,-./:;<=>?@[\]^_`{|}~\t\n'，包含標點符號，製表符和換行符等
 
 * lower：布爾值，是否將序列設為小寫形式
 
@@ -66,7 +66,7 @@ keras.preprocessing.text.hashing_trick(text,
 
 * n: 哈希空間的維度
 
-* hash_function: 默認為python `hash` 函數, 可以是'md5' 或任何接受輸入字符串, 並返回int 的函數. 注意`hash` 不是一個穩定的哈希函數, 因此在不同執行環境下會產生不同的結果, 作為對比, 'md5' 是一個穩定的哈希函數.
+* hash_function: 預設為python `hash` 函數, 可以是'md5' 或任何接受輸入字符串, 並返回int 的函數. 注意`hash` 不是一個穩定的哈希函數, 因此在不同執行環境下會產生不同的結果, 作為對比, 'md5' 是一個穩定的哈希函數.
 
 ### 返回值
 
@@ -114,7 +114,7 @@ Tokenizer是一個用於向量化文本，或將文本轉換為序列（即單�
 
 * texts：待向量化的文本列表
 
-* mode：‘binary’，‘count’，‘tfidf’，‘freq’之一，默認為‘binary’
+* mode：‘binary’，‘count’，‘tfidf’，‘freq’之一，預設為‘binary’
 
 * 返回值：形如```(len(texts), nb_words)```的numpy array
 
@@ -126,7 +126,7 @@ Tokenizer是一個用於向量化文本，或將文本轉換為序列（即單�
 
 * sequences：待向量化的序列列表
 
-* mode：‘binary’，‘count’，‘tfidf’，‘freq’之一，默認為‘binary’
+* mode：‘binary’，‘count’，‘tfidf’，‘freq’之一，預設為‘binary’
 
 * 返回值：形如```(len(sequences), nb_words)```的numpy array
 
