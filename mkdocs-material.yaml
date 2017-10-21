@@ -1,0 +1,51 @@
+site_name: keras-docs-tw
+pages:
+- ['index.md','主頁']
+- ['for_beginners/concepts.md','keras新手指南','一些基本概念']
+- ['for_beginners/FAQ.md','keras新手指南','常見問題與解答']
+- ['for_beginners/keras_linux.md','keras新手指南','Keras安裝和配置指南(Linux)']
+- ['for_beginners/keras_windows.md','keras新手指南','Keras安裝和配置指南(Windows)']
+- ['for_beginners/trap.md','keras新手指南','Keras使用陷阱']
+- ['getting_started/sequential_model.md','快速開始','序貫模型']
+- ['getting_started/functional_API.md','快速開始','函數式模型']
+- ['models/about_model.md','模型','關於Keras模型']
+- ['models/sequential.md','模型','序貫模型API']
+- ['models/model.md','模型','函數式模型API']
+- ['layers/about_layer.md','網絡層','關於Keras層']
+- ['layers/core_layer.md','網絡層','常用層Core']
+- ['layers/convolutional_layer.md','網絡層','卷積層Convolutional']
+- ['layers/pooling_layer.md','網絡層','池化層Pooling']
+- ['layers/locally_connected_layer.md','網絡層','局部連接層Locally-connented']
+- ['layers/recurrent_layer.md','網絡層','循環層Recurrent']
+- ['layers/embedding_layer.md','網絡層','嵌入層Embedding']
+- ['layers/merge.md','網絡層','融合層Merge']
+- ['layers/advanced_activation_layer.md','網絡層','高級激活層Advanced Activation']
+- ['layers/normalization_layer.md','網絡層','規範層BatchNormalization']
+- ['layers/noise_layer.md','網絡層','噪聲層Noise']
+- ['layers/wrapper.md','網絡層','包裝器Wrapper']
+- ['layers/writting_layer.md','網絡層','編寫自己的層']
+- ['preprocessing/sequence.md','數據預處理','序列預處理']
+- ['preprocessing/text.md','數據預處理','文本預處理']
+- ['preprocessing/image.md','數據預處理','圖片預處理']
+- ['other/objectives.md','網絡配置','損失函數loss']
+- ['other/optimizers.md','網絡配置','優化器Optimizer']
+- ['other/activations.md','網絡配置','激活函數Activation']
+- ['other/metrics.md','網絡配置','性能評估Metrices']
+- ['other/initializations.md','網絡配置','初始化方法Initializers']
+- ['other/regularizers.md','網絡配置','正則項Regularizer']
+- ['other/constraints.md','網絡配置','約束項Constraint']
+- ['other/callbacks.md','網絡配置','回調函數Callback']
+- ['other/application.md','協助使用Keras','預訓練模型Application']
+- ['other/datasets.md','協助使用Keras','常用數據庫Dataset']
+- ['other/visualization.md','協助使用Keras','可視化visualization']
+- ['utils.md','協助使用Keras','工具']
+- ['backend.md','keras後端Backend']
+- ['scikit-learn_API.md','scikit-learn接口']
+- ['acknowledgement.md','致謝']
+theme: 'material'
+site_author: ErhwenKuo
+markdown_extensions:
+  - admonition
+  - codehilite:
+      linenums: True
+repo_url: http://github.com/erhwenkuo/keras-docs-tw
