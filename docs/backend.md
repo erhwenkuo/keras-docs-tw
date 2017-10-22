@@ -20,7 +20,7 @@ Keras是一個模型級的庫，提供了快速構建深度學習網絡的模塊
 
 如果該目錄下沒有該文件，你可以手動創建一個
 
-文件的默認配置如下：
+文件的預設配置如下：
 
 ```
 {
@@ -131,13 +131,13 @@ set_epsilon(e)
 ```python
 floatx()
 ```
-返回默認的浮點數數據類型，為字符串，如 'float16', 'float32', 'float64'
+返回預設的浮點數數據類型，為字符串，如 'float16', 'float32', 'float64'
 
 ### set_floatx(floatx)
 ```python
 floatx()
 ```
-設置默認的浮點數數據類型，為字符串，如 'float16', 'float32', 'float64',示例：
+設置預設的浮點數數據類型，為字符串，如 'float16', 'float32', 'float64',示例：
 ```python
 >>> from keras import backend as K
 >>> K.floatx()
@@ -152,7 +152,7 @@ floatx()
 ```python
 cast_to_floatx(x)
 ```
-將numpy array轉換為默認的Keras floatx類​​型，x為numpy array，返回值也為numpy array但其數據類型變為floatx。示例：
+將numpy array轉換為預設的Keras floatx類​​型，x為numpy array，返回值也為numpy array但其數據類型變為floatx。示例：
 ```python
 >>> from keras import backend as K
 >>> K.floatx()
@@ -171,7 +171,7 @@ dtype('float32')
 ```python
 image_data_format()
 ```
-返回默認的圖像的維度順序（‘channels_last’或‘channels_first’）
+返回預設的圖像的維度順序（‘channels_last’或‘channels_first’）
 
 ### set_image_data_format
 ```python
@@ -209,7 +209,7 @@ True
 ```python
 get_uid(prefix='')
 ```
-獲得默認計算圖的uid，依據給定的前綴提供一個唯一的UID，參數為表示前綴的字符串，返回值為整數.
+獲得預設計算圖的uid，依據給定的前綴提供一個唯一的UID，參數為表示前綴的字符串，返回值為整數.
 ### reset_uids
 ```python
 reset_uids()
@@ -244,7 +244,7 @@ clear_session()
 ```python
 manual_variable_initialization(value)
 ```
-指出變量應該以其默認值被初始化還是由用戶手動初始化，參數value為布爾值，默認False代表變量由其默認值初始化
+指出變量應該以其預設值被初始化還是由用戶手動初始化，參數value為布爾值，預設False代表變量由其預設值初始化
 
 ### learning_phase
 
@@ -951,7 +951,7 @@ arange(start, stop=None, step=1, dtype='int32')
 ```
 生成1D的整數序列張量，該函數的參數與Theano的arange函數含義相同，如果只有一個參數被提供了，那麼它實際上就是`stop`參數的值
 
-為了與tensorflow的默認保持匹配，函數返回張量的默認數據類型是`int32`
+為了與tensorflow的預設保持匹配，函數返回張量的預設數據類型是`int32`
 
 ### tile
 ```python

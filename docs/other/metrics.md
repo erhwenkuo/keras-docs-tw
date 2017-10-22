@@ -31,7 +31,7 @@ model.compile(loss='mean_squared_error',
 
 ## 可用預定義張量
 
-除fbeta_score額外擁有默認參數beta=1外,其他各個性能指標的參數均為y_true和y_pred
+除fbeta_score額外擁有預設參數beta=1外,其他各個性能指標的參數均為y_true和y_pred
 
 * binary_accuracy: 對二分類問題,計算在所有預測值上的平均正確率
 * categorical_accuracy:對多分類問題,計算再所有預測值上的平均正確率

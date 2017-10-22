@@ -184,7 +184,7 @@ Xception V1 模型, 權重由ImageNet訓練而言
 
 注意,該模型目前僅能以TensorFlow為後端使用,由於它依賴於"SeparableConvolution"層,目前該模型只支持channels_last的維度順序(width, height, channels)
 
-默認輸入圖片大小為299x299
+預設輸入圖片大小為299x299
 
 ### 參數
 * include_top：是否保留頂層的3個全連接網絡
@@ -225,7 +225,7 @@ VGG16模型,權重由ImageNet訓練而來
 
 該模型再Theano和TensorFlow後端均可使用,並接受channels_first和channels_last兩種輸入維度順序
 
-模型的默認輸入尺寸時224x224
+模型的預設輸入尺寸時224x224
 
 ### 參數
 * include_top：是否保留頂層的3個全連接網絡
@@ -262,7 +262,7 @@ VGG19模型,權重由ImageNet訓練而來
 
 該模型在Theano和TensorFlow後端均可使用,並接受channels_first和channels_last兩種輸入維度順序
 
-模型的默認輸入尺寸時224x224
+模型的預設輸入尺寸時224x224
 ### 參數
 * include_top：是否保留頂層的3個全連接網絡
 * weights：None代表隨機初始化，即不加載預訓練權重。 'imagenet'代表加載預訓練權重
@@ -300,7 +300,7 @@ keras.applications.resnet50.ResNet50(include_top=True, weights='imagenet',
 
 該模型在Theano和TensorFlow後端均可使用,並接受channels_first和channels_last兩種輸入維度順序
 
-模型的默認輸入尺寸時224x224
+模型的預設輸入尺寸時224x224
 
 ### 參數
 * include_top：是否保留頂層的全連接網絡
@@ -339,7 +339,7 @@ InceptionV3網絡,權重訓練自ImageNet
 
 該模型在Theano和TensorFlow後端均可使用,並接受channels_first和channels_last兩種輸入維度順序
 
-模型的默認輸入尺寸時299x299
+模型的預設輸入尺寸時299x299
 ### 參數
 * include_top：是否保留頂層的全連接網絡
 * weights：None代表隨機初始化，即不加載預訓練權重。 'imagenet'代表加載預訓練權重
@@ -379,7 +379,7 @@ model = load_model('mobilenet.h5', custom_objects={
                    'DepthwiseConv2D': mobilenet.DepthwiseConv2D})
 ```
 
-模型的默認輸入尺寸時224x224
+模型的預設輸入尺寸時224x224
 ### 參數
 * include_top：是否保留頂層的全連接網絡
 * weights：None代表隨機初始化，即不加載預訓練權重。 'imagenet'代表加載預訓練權重
@@ -390,7 +390,7 @@ model = load_model('mobilenet.h5', custom_objects={
 * alpha: 控製網絡的寬度：
   * 如果alpha<1，則同比例的減少每層的濾波器個數
   * 如果alpha>1，則同比例增加每層的濾波器個數
-  * 如果alpha=1，使用默認的濾波器個數
+  * 如果alpha=1，使用預設的濾波器個數
 * depth_multiplier：depthwise卷積的深度乘子，也稱為（分辨率乘子）
 * dropout：dropout比例
 ### 返回值

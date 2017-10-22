@@ -65,7 +65,7 @@ keras.layers.local.LocallyConnected2D(filters, kernel_size, strides=(1, 1), padd
 
 * activation：激活函數，為預定義的激活函數名（參考[激活函數](../other/activations)），或逐元素（element-wise）的Theano函數。如果不指定該參數，將不會使用任何激活函數（即使用線性激活函數：a(x)=x）
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 * use_bias:布爾值，是否使用偏置項
 

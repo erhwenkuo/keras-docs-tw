@@ -79,7 +79,7 @@ from keras.datasets import imdb
 
 * seed：整數，用於數據重排的隨機數種子
 
-* start_char：字符，序列的起始將以該字符標記，默認為1因為0通常用作padding
+* start_char：字符，序列的起始將以該字符標記，預設為1因為0通常用作padding
 
 * oov_char：整數，因```nb_words```或```skip_top```限製而cut掉的單詞將被該字符代替
 
@@ -168,7 +168,7 @@ from keras.datasets import boston_housing
 
 ### 參數
 
-* path：數據存放位置，默認```'~/.keras/datasets/'+path```
+* path：數據存放位置，預設```'~/.keras/datasets/'+path```
 
 * seed：隨機數種子
 

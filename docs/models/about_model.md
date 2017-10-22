@@ -42,4 +42,4 @@ model = model_from_yaml(yaml_string)
 
 * ```model.save_weights(filepath)```：將模型權重保存到指定路徑，文件類型是HDF5（後綴是.h5）
 
-* ```model.load_weights(filepath, by_name=False)```：從HDF5文件中加載權重到當前模型中, 默認情況下模型的結構將保持不變。如果想將權重載入不同的模型（有些層相同）中，則設置```by_name=True```，只有名字匹配的層才會載入權重
+* ```model.load_weights(filepath, by_name=False)```：從HDF5文件中加載權重到當前模型中, 預設情況下模型的結構將保持不變。如果想將權重載入不同的模型（有些層相同）中，則設置```by_name=True```，只有名字匹配的層才會載入權重

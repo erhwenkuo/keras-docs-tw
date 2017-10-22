@@ -19,7 +19,7 @@ keras.preprocessing.sequence.pad_sequences(sequences, maxlen=None, dtype='int32'
 
 * truncating：‘pre’或‘post’，確定當需要截斷序列時，從起始還是結尾截斷
 
-* value：浮點數，此值將在填充時代替默認的填充值0
+* value：浮點數，此值將在填充時代替預設的填充值0
 
 ### 返回值
 

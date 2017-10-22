@@ -42,7 +42,7 @@ compile(self, optimizer, loss, metrics=None, loss_weights=None, sample_weight_mo
 
 * metrics：列表，包含評估模型在訓練和測試時的性能的指標，典型用法是```metrics=['accuracy']```如果要在多輸出模型中為不同的輸出指定不同的指標，可像該參數傳遞一個字典，例如```metrics={'ouput_a': 'accuracy'}```
 
-* sample_weight_mode：如果你需要按時間步為樣本賦權（2D權矩陣），將該值設為“temporal”。默認為“None”，代表按樣本賦權（1D權）。如果模型有多個輸出，可以向該參數傳入指定sample_weight_mode的字典或列表。在下面```fit```函數的解釋中有相關的參考內容。
+* sample_weight_mode：如果你需要按時間步為樣本賦權（2D權矩陣），將該值設為“temporal”。預設為“None”，代表按樣本賦權（1D權）。如果模型有多個輸出，可以向該參數傳入指定sample_weight_mode的字典或列表。在下面```fit```函數的解釋中有相關的參考內容。
 
 * kwargs：使用TensorFlow作為後端請忽略該參數，若使用Theano作為後端，kwargs的值將會傳遞給 K.function
 

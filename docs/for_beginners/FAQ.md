@@ -6,7 +6,7 @@
 * [如何保存Keras模型? ](#save_model)
 * [為什麼訓練誤差(loss)比測試誤差高很多? ](#loss)
 * [如何獲取中間層的輸出? ](#intermediate_layer)
-* [如何利用Keras處理超過機器內存的數據集? ](#dataset)
+* [如何利用Keras處理超過機器記憶體的數據集? ](#dataset)
 * [當驗證集的loss不再下降時，如何中斷訓練? ](#stop_train)
 * [驗證集是如何從訓練集中分割出來的? ](#validation_spilt)
 * [訓練數據在訓練時會被隨機洗亂嗎? ](#shuffle)
@@ -232,7 +232,7 @@ layer_output = get_3rd_layer_output([X, 1])[0]
 
 <a name='dataset'>
 <font color='#404040'>
-## 如何利用Keras處理超過機器內存的數據集?
+## 如何利用Keras處理超過機器記憶體的數據集?
 </font>
 </a>
 
@@ -278,7 +278,7 @@ model.fit(X, y, validation_split=0.2, callbacks=[early_stopping])
 </font>
 </a>
 
-是的，如果```model.fit```的```shuffle```參數為真，訓練的數據就會被隨機洗亂。不設置時默認為真。訓練數據會在每個epoch的訓練中都重新洗亂一次。
+是的，如果```model.fit```的```shuffle```參數為真，訓練的數據就會被隨機洗亂。不設置時預設為真。訓練數據會在每個epoch的訓練中都重新洗亂一次。
 
 驗證集的數據不會被洗亂
 
@@ -474,7 +474,7 @@ with h5py.File('input/file.hdf5', 'r') as f:
 </font>
 </a>
 
-所有的Keras數據默認存儲在：
+所有的Keras數據預設存儲在：
 ```bash
 $HOME/.keras/
 ```
@@ -483,7 +483,7 @@ $HOME/.keras/
 
 當Keras無法在上面的位置創建文件夾時（例如由於權限原因），備用的地址是`/tmp/.keras/`
 
-Keras配置文件為JSON格式的文件，保存在`$HOME/.keras/keras.json`。默認的配置文件長這樣：
+Keras配置文件為JSON格式的文件，保存在`$HOME/.keras/keras.json`。預設的配置文件長這樣：
 
 ```
 {
@@ -496,12 +496,12 @@ Keras配置文件為JSON格式的文件，保存在`$HOME/.keras/keras.json`。�
 該文件包含下列字段：
 
 
-- 默認的圖像數據格式`channels_last`或`channels_first`
+- 預設的圖像數據格式`channels_last`或`channels_first`
 - 用於防止除零錯誤的`epsilon`
-- 默認的浮點數類型
-- 默認的後端
+- 預設的浮點數類型
+- 預設的後端
 
-類似的，緩存的數據集文件，即由`get_file()`下載的文件，默認保存在`$HOME/.keras/datasets/`
+類似的，緩存的數據集文件，即由`get_file()`下載的文件，預設保存在`$HOME/.keras/datasets/`
 
 ***
 <a name='reproduce'>

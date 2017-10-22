@@ -13,15 +13,15 @@ keras.layers.recurrent.Recurrent(return_sequences=False, go_backwards=False, sta
 
 * weights：numpy array的list，用以初始化權重。該list形如```[(input_dim, output_dim),(output_dim, output_dim),(output_dim,)]```
 
-* return_sequences：布爾值，默認```False```，控制返回類型。若為```True```則返回整個序列，否則僅返回輸出序列的最後一個輸出
+* return_sequences：布爾值，預設```False```，控制返回類型。若為```True```則返回整個序列，否則僅返回輸出序列的最後一個輸出
 
-* go_backwards：布爾值，默認為```False```，若為```True```，則逆向處理輸入序列並返回逆序後的序列
+* go_backwards：布爾值，預設為```False```，若為```True```，則逆向處理輸入序列並返回逆序後的序列
 
-* stateful：布爾值，默認為```False```，若為```True```，則一個batch中下標為i的樣本的最終狀態將會用作下一個batch同樣下標的樣本的初始狀態。
+* stateful：布爾值，預設為```False```，若為```True```，則一個batch中下標為i的樣本的最終狀態將會用作下一個batch同樣下標的樣本的初始狀態。
 
-* unroll：布爾值，默認為```False```，若為```True```，則循環層將被展開，否則就使用符號化的循環。當使用TensorFlow為後端時，循環網絡本來就是展開的，因此該層不做任何事情。層展開會佔用更多的內存，但會加速RNN的運算。層展開只適用於短序列。
+* unroll：布爾值，預設為```False```，若為```True```，則循環層將被展開，否則就使用符號化的循環。當使用TensorFlow為後端時，循環網絡本來就是展開的，因此該層不做任何事情。層展開會佔用更多的記憶體，但會加速RNN的運算。層展開只適用於短序列。
 
-* implementation：0，1或2， 若為0，則RNN將以更少但是更大的矩陣乘法實現，因此在CPU上運行更快，但消耗更多的內存。如果設為1，則RNN將以更多但更小的矩陣乘法實現，因此在CPU上運行更慢，在GPU上運行更快，並且消耗更少的內存。如果設為2（僅LSTM和GRU可以設為2），則RNN將把輸入門、遺忘門和輸出門合併為單個矩陣，以獲得更加在GPU上更加高效的實現。注意，RNN dropout必須在所有門上共享，並導致正則效果性能微弱降低。
+* implementation：0，1或2， 若為0，則RNN將以更少但是更大的矩陣乘法實現，因此在CPU上運行更快，但消耗更多的記憶體。如果設為1，則RNN將以更多但更小的矩陣乘法實現，因此在CPU上運行更慢，在GPU上運行更快，並且消耗更少的記憶體。如果設為2（僅LSTM和GRU可以設為2），則RNN將把輸入門、遺忘門和輸出門合併為單個矩陣，以獲得更加在GPU上更加高效的實現。注意，RNN dropout必須在所有門上共享，並導致正則效果性能微弱降低。
 
 * input_dim：輸入維度，當使用該層為模型首層時，應指定該值（或等價的指定input_shape)
 

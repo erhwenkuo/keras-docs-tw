@@ -180,7 +180,7 @@ sudo pip install keras
 
 ##在Theano、CNTK、TensorFlow間切換
 
-Keras默認使用TensorFlow作為後端來進行張量操作，如需切換到Theano，請查看[這裡](backend)
+Keras預設使用TensorFlow作為後端來進行張量操作，如需切換到Theano，請查看[這裡](backend)
 
 ***
 

@@ -36,7 +36,7 @@ keras.preprocessing.image.ImageDataGenerator(featurewise_center=False,
 
 * zca_whitening：布爾值，對輸入數據施加ZCA白化
 
-* zca_epsilon: ZCA使用的eposilon，默認1e-6
+* zca_epsilon: ZCA使用的eposilon，預設1e-6
 
 * rotation_range：整數，數據提升時圖片隨機轉動的角度
 
@@ -58,10 +58,10 @@ keras.preprocessing.image.ImageDataGenerator(featurewise_center=False,
 
 * vertical_flip：布爾值，進行隨機豎直翻轉
 
-* rescale: 重放縮因子,默認為None. 如果為None或0則不進行放縮,否則會將該數值乘到數據上(在應用其他變換之前)
+* rescale: 重放縮因子,預設為None. 如果為None或0則不進行放縮,否則會將該數值乘到數據上(在應用其他變換之前)
 * preprocessing_function: 將被應用於每個輸入的函數。該函數將在任何其他修改之前運行。該函數接受一個參數，為一張圖片（秩為3的numpy array），並且輸出一個具有相同shape的numpy array
 
-* data_format：字符串，“channel_first”或“channel_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channel_last”對應原本的“tf”，“channel_first”對應原本的“th”。以128x128的RGB圖像為例，“channel_first”應將數據組織為（3,128,128），而“channel_last”應將數據組織為（128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channel_last”
+* data_format：字符串，“channel_first”或“channel_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channel_last”對應原本的“tf”，“channel_first”對應原本的“th”。以128x128的RGB圖像為例，“channel_first”應將數據組織為（3,128,128），而“channel_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channel_last”
 
 ***
 
@@ -73,7 +73,7 @@ keras.preprocessing.image.ImageDataGenerator(featurewise_center=False,
 
     * augment：布爾值，確定是否使用隨即提升過的數據
 
-    * round：若設```augment=True```，確定要在數據上進行多少輪數據提升，默認值為1
+    * round：若設```augment=True```，確定要在數據上進行多少輪數據提升，預設值為1
 
     * seed: 整數,隨機數種子
 
@@ -83,15 +83,15 @@ keras.preprocessing.image.ImageDataGenerator(featurewise_center=False,
 
     * y：標籤
 
-    * batch_size：整數，默認32
+    * batch_size：整數，預設32
 
-    * shuffle：布爾值，是否隨機打亂數據，默認為True
+    * shuffle：布爾值，是否隨機打亂數據，預設為True
 
     * save_to_dir：None或字符串，該參數能讓你將提升後的圖片保存起來，用以可視化
 
     * save_prefix：字符串，保存提升後圖片時使用的前綴, 僅當設置了```save_to_dir```時生效
 
-    * save_format："png"或"jpeg"之一，指定保存圖片的數據格式,默認"jpeg"
+    * save_format："png"或"jpeg"之一，指定保存圖片的數據格式,預設"jpeg"
 
     * yields:形如(x,y)的tuple,x是代表圖像數據的numpy數組.y是代表標籤的numpy數組.該迭代器無限循環.
 
@@ -100,16 +100,16 @@ keras.preprocessing.image.ImageDataGenerator(featurewise_center=False,
 * flow_from_directory(directory): 以文件夾路徑為參數,生成經過數據提升/歸一化後的數據,在一個無限循環中無限產生batch數據
 
     * directory: 目標文件夾路徑,對於每一個類,該文件夾都要包含一個子文件夾.子文件夾中任何JPG、PNG和BNP的圖片都會被生成器使用.詳情請查看[<font color= '#FF0000'>此腳本</font>](https://gist.github.com/fchollet/0830affa1f7f19fd47b06d4cf89ed44d)
-    * target_size: 整數tuple,默認為(256, 256). 圖像將被resize成該尺寸
-    * color_mode: 顏色模式,為"grayscale","rgb"之一,默認為"rgb".代表這些圖片是否會被轉換為單通道或三通道的圖片.
-    * classes: 可選參數,為子文件夾的列表,如['dogs','cats']默認為None. 若未提供,則該類別列表將從`directory`下的子文件夾名稱/結構自動推斷。每一個子文件夾都會被認為是一個新的類。 (類別的順序將按照字母表順序映射到標籤值)。通過屬性`class_indices`可獲得文件夾名與類的序號的對應字典。
-    * class_mode: "categorical", "binary", "sparse"或None之一. 默認為"categorical. 該參數決定了返回的標籤數組的形式, "categorical"會返回2D的one-hot編碼標籤,"binary "返回1D的二值標籤."sparse"返回1D的整數標籤,如果為None則不返回任何標籤, 生成器將僅僅生成batch數據, 這種情況在使用```model.predict_generator()```和```model.evaluate_generator()```等函數時會用到.
-    * batch_size: batch數據的大小,默認32
-    * shuffle: 是否打亂數據,默認為True
+    * target_size: 整數tuple,預設為(256, 256). 圖像將被resize成該尺寸
+    * color_mode: 顏色模式,為"grayscale","rgb"之一,預設為"rgb".代表這些圖片是否會被轉換為單通道或三通道的圖片.
+    * classes: 可選參數,為子文件夾的列表,如['dogs','cats']預設為None. 若未提供,則該類別列表將從`directory`下的子文件夾名稱/結構自動推斷。每一個子文件夾都會被認為是一個新的類。 (類別的順序將按照字母表順序映射到標籤值)。通過屬性`class_indices`可獲得文件夾名與類的序號的對應字典。
+    * class_mode: "categorical", "binary", "sparse"或None之一. 預設為"categorical. 該參數決定了返回的標籤數組的形式, "categorical"會返回2D的one-hot編碼標籤,"binary "返回1D的二值標籤."sparse"返回1D的整數標籤,如果為None則不返回任何標籤, 生成器將僅僅生成batch數據, 這種情況在使用```model.predict_generator()```和```model.evaluate_generator()```等函數時會用到.
+    * batch_size: batch數據的大小,預設32
+    * shuffle: 是否打亂數據,預設為True
     * seed: 可選參數,打亂數據和進行變換時的隨機數種子
     * save_to_dir: None或字符串，該參數能讓你將提升後的圖片保存起來，用以可視化
     * save_prefix：字符串，保存提升後圖片時使用的前綴, 僅當設置了```save_to_dir```時生效
-    * save_format："png"或"jpeg"之一，指定保存圖片的數據格式,默認"jpeg"
+    * save_format："png"或"jpeg"之一，指定保存圖片的數據格式,預設"jpeg"
     * flollow_links: 是否訪問子文件夾中的軟鏈接
 ### 例子
 

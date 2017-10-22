@@ -72,7 +72,7 @@ keras.layers.convolutional.Conv2D(filters, kernel_size, strides=(1, 1), padding=
 
 * dilation_rate：單個整數或由兩個個整數構成的list/tuple，指定dilated convolution中的膨脹比例。任何不為1的dilation_rate均與任何不為1的strides均不兼容。
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 * use_bias:布爾值，是否使用偏置項
 
@@ -134,7 +134,7 @@ keras.layers.convolutional.SeparableConv2D(filters, kernel_size, strides=(1, 1),
 
 * dilation_rate：單個整數或由兩個個整數構成的list/tuple，指定dilated convolution中的膨脹比例。任何不為1的dilation_rate均與任何不為1的strides均不兼容。
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 * use_bias:布爾值，是否使用偏置項
 
@@ -203,7 +203,7 @@ keras.layers.convolutional.Conv2DTranspose(filters, kernel_size, strides=(1, 1),
 
 * dilation_rate：單個整數或由兩個個整數構成的list/tuple，指定dilated convolution中的膨脹比例。任何不為1的dilation_rate均與任何不為1的strides均不兼容。
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 * use_bias:布爾值，是否使用偏置項
 * kernel_initializer：權值初始化方法，為預定義初始化方法名的字符串，或用於初始化權重的初始化器。參考[initializers](../other/initializations)
@@ -263,7 +263,7 @@ keras.layers.convolutional.Conv3D(filters, kernel_size, strides=(1, 1, 1), paddi
 
 * dilation_rate：單個整數或由3個個整數構成的list/tuple，指定dilated convolution中的膨脹比例。任何不為1的dilation_rate均與任何不為1的strides均不兼容。
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表數據的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128x128的數據為例，“channels_first”應將數據組織為（3,128,128,128），而“channels_last”應將數據組織為（128,128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表數據的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128x128的數據為例，“channels_first”應將數據組織為（3,128,128,128），而“channels_last”應將數據組織為（128,128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 * use_bias:布爾值，是否使用偏置項
 
@@ -322,7 +322,7 @@ keras.layers.convolutional.Cropping2D(cropping=((0, 0), (0, 0)), data_format=Non
 
 * cropping：長為2的整數tuple，分別為寬和高方向上頭部與尾部需要裁剪掉的元素數
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 ### 輸入shape
 
@@ -343,7 +343,7 @@ keras.layers.convolutional.Cropping3D(cropping=((1, 1), (1, 1), (1, 1)), data_fo
 ### 參數
 * cropping：長為3的整數tuple，分別為三個方向上頭部與尾部需要裁剪掉的元素數
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表數據的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128x128的數據為例，“channels_first”應將數據組織為（3,128,128,128），而“channels_last”應將數據組織為（128,128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表數據的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128x128的數據為例，“channels_first”應將數據組織為（3,128,128,128），而“channels_last”應將數據組織為（128,128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 ### 輸入shape
 
@@ -382,7 +382,7 @@ keras.layers.convolutional.UpSampling2D(size=(2, 2), data_format=None)
 
 * size：整數tuple，分別為行和列上採樣因子
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 ### 輸入shape
 
@@ -410,7 +410,7 @@ keras.layers.convolutional.UpSampling3D(size=(2, 2, 2), data_format=None)
 
 * size：長為3的整數tuple，代表在三個維度上的上採樣因子
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表數據的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128x128的數據為例，“channels_first”應將數據組織為（3,128,128,128），而“channels_last”應將數據組織為（128,128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表數據的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128x128的數據為例，“channels_first”應將數據組織為（3,128,128,128），而“channels_last”應將數據組織為（128,128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 ### 輸入shape
 
@@ -456,7 +456,7 @@ keras.layers.convolutional.ZeroPadding2D(padding=(1, 1), data_format=None)
 
 * padding：整數tuple，表示在要填充的軸的起始和結束處填充0的數目，這裡要填充的軸是軸3和軸4（即在'th'模式下圖像的行和列，在' channels_last'模式下要填充的則是軸2，3）
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128的RGB圖像為例，“channels_first”應將數據組織為（3,128,128），而“channels_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 ### 輸入shape
 
@@ -484,7 +484,7 @@ keras.layers.convolutional.ZeroPadding3D(padding=(1, 1, 1), data_format=None)
 
 padding：整數tuple，表示在要填充的軸的起始和結束處填充0的數目，這裡要填充的軸是軸3，軸4和軸5，‘channels_last’模式下則是軸2，3和4
 
-* data_format：字符串，“channels_first”或“channels_last”之一，代表數據的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128x128的數據為例，“channels_first”應將數據組織為（3,128,128,128），而“channels_last”應將數據組織為（128,128,128,3）。該參數的默認值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
+* data_format：字符串，“channels_first”或“channels_last”之一，代表數據的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channels_last”對應原本的“tf”，“channels_first”對應原本的“th”。以128x128x128的數據為例，“channels_first”應將數據組織為（3,128,128,128），而“channels_last”應將數據組織為（128,128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channels_last”。
 
 ### 輸入shape
 

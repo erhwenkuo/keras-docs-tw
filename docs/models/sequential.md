@@ -42,7 +42,7 @@ compile(self, optimizer, loss, metrics=None, sample_weight_mode=None)
 
 * metrics：列表，包含評估模型在訓練和測試時的網絡性能的指標，典型用法是```metrics=['accuracy']```
 
-* sample_weight_mode：如果你需要按時間步為樣本賦權（2D權矩陣），將該值設為“temporal”。默認為“None”，代表按樣本賦權（1D權）。在下面```fit```函數的解釋中有相關的參考內容。
+* sample_weight_mode：如果你需要按時間步為樣本賦權（2D權矩陣），將該值設為“temporal”。預設為“None”，代表按樣本賦權（1D權）。在下面```fit```函數的解釋中有相關的參考內容。
 
 * kwargs：使用TensorFlow作為後端請忽略該參數，若使用Theano作為後端，kwargs的值將會傳遞給 K.function
 
