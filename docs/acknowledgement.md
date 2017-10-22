@@ -34,6 +34,7 @@
 |Bigmoyan|向BN層載入權重陷阱|
 |Yin|validation_spilit與shuffle陷阱|
 |Hui Liu|merge與Merge的區別|
+
 ## Reviewers
 
 | Reviewer | 頁面 | 章節 |
@@ -60,6 +61,11 @@
 |QiaXi|Pooling層|GlobalMax/GlobalAve|
 |shawn|Callback|ModelCheckpoint|
 |smallYoki|快速開始|泛型模型|
+
+## 勘誤
+| Reviewer | 頁面 | 章節 | 勘誤 |
+|:--------:|:----:|:----:|:----:|
+|Summit Suen|*|*|常用繁中計算機術語修正|
 
 ## 示例程序
 
