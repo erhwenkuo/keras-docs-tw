@@ -76,7 +76,7 @@ code
 
 ## Markdown繁體中文教程
 
-[Markdown](http://http://markdown.tw/)
+[Markdown](http://markdown.tw/)
 
 ## MkDocs中文教程
 
