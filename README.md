@@ -74,9 +74,9 @@ code
 
 # 參考網站
 
-## Markdown簡明教程
+## Markdown繁體中文教程
 
-[Markdown](http://wowubuntu.com/markdown/)
+[Markdown](http://http://markdown.tw/)
 
 ## MkDocs中文教程
 
