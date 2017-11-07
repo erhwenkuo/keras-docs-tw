@@ -35,19 +35,19 @@ ImageDataGenerator對於只有很少的圖像數據, 可以透過一些圖像位
 
 * samplewise_std_normalization：布林值，將輸入的每個樣本除以其自身的標準差
 
-* zca_whitening：布林值，對輸入數據施加ZCA(數據x先經過PCA變換為z，但是並不降維)白化處理, 目的是去掉數據(像素)之間的相關聯度
+* zca_whitening：布林值，對輸入數據施加ZCA白化處理(數據先經過PCA變換，但是並不降維), 目的是去掉數據(像素)之間的關聯度
 
 * zca_epsilon: ZCA使用的eposilon，預設值為1e-6
 
-* rotation_range：整數(轉動的角度0~180, 例如: 20)，隨機轉動圖片的角度
+* rotation_range：整數 (轉動的角度0~180, 例如: 20)，隨機轉動圖片的角度
 
-* width_shift_range：浮點數(圖片寬度的某個比例值0~1, 例如: 0.15)，圖片水平偏移的幅度
+* width_shift_range：浮點數 (圖片寬度的某個比例值0~1, 例如: 0.15)，圖片水平偏移的幅度
 
-* height_shift_range：浮點數(圖片高度的某個比例0~1, 例如: 0.15)，圖片垂直偏移的幅度
+* height_shift_range：浮點數 (圖片高度的某個比例0~1, 例如: 0.15)，圖片垂直偏移的幅度
 
 * shear_range：浮點數，剪切強度（逆時針方向的剪切變換角度）
 
-* zoom_range：浮點數(縮小放大的幅度)或形如```[lower,upper]```的列表，，若為浮點數，則相當於```[lower,upper] = [1 - zoom_range, 1 +zoom_range]```
+* zoom_range：浮點數 (縮小放大的幅度)或形如```[lower,upper]```的列表，，若為浮點數，則相當於```[lower,upper] = [1 - zoom_range, 1 +zoom_range]```
 
 * channel_shift_range：浮點數，隨機通道偏移的幅度
 
@@ -57,12 +57,12 @@ ImageDataGenerator對於只有很少的圖像數據, 可以透過一些圖像位
 
 * horizo​​ntal_flip：布林值，進行隨機水平翻轉
 
-* vertical_flip：布林值，進行隨機豎直翻轉
+* vertical_flip：布林值，進行隨機垂直翻轉
 
-* rescale: 重放縮因子,預設為None. 如果為None或0則不進行放縮,否則會將該數值乘到數據上(在應用其他變換之前)
+* rescale: 重縮放因子,預設為None. 如果為None或0則不進行縮放,否則會將該數值乘到數據上(在應用其他變換之前)
 * preprocessing_function: 將被應用於每個輸入的函數。該函數將在任何其他修改之前運行。該函數接受一個參數，為一張圖片（秩為3的numpy array），並且輸出一個具有相同shape的numpy array
 
-* data_format：字符串，“channel_first”或“channel_last”之一，代表圖像的通道維的位置。該參數是Keras 1.x中的image_dim_ordering，“channel_last”對應原本的“tf”，“channel_first”對應原本的“th”。以128x128的RGB圖像為例，“channel_first”應將數據組織為（3,128,128），而“channel_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channel_last”
+* data_format：字符串，“channel_first”或“channel_last”之一，代表圖像的通道維度的位置。該參數是Keras 1.x中的image_dim_ordering，“channel_last”對應原本的“tf”，“channel_first”對應原本的“th”。以128x128的RGB圖像為例，“channel_first”應將數據組織為（3,128,128），而“channel_last”應將數據組織為（128,128,3）。該參數的預設值是```~/.keras/keras.json```中設置的值，若從未設置過，則為“channel_last”
 
 ***
 
