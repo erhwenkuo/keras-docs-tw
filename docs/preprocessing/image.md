@@ -22,31 +22,32 @@ keras.preprocessing.image.ImageDataGenerator(featurewise_center=False,
     preprocessing_function=None,
     data_format=K.image_data_format())
 ```
-用以生成一個batch的圖像數據，支持實時數據提升。訓練時該函數會無限生成數據，直到達到規定的epoch次數為止。
+用以生成一小批次(minibatch)圖像數據，支持實時動態圖像數據提升(data augmentation)。在進行模型訓練時, 這個函數可以無限生成批次的圖像數據，直到達到設定的訓練循環(epochs)次數為止。
+ImageDataGenerator對於只有很少的圖像數據, 可以透過一些圖像位移、角度轉換、鏡像..等等的圖像處理手法來產生不同的圖像數據。
 
 ### 參數
 
-* featurewise_center：布爾值，使輸入數據集去中心化（均值為0）, 按feature執行
+* featurewise_center：布林值，使輸入數據集去中心化（均值為0）, 按feature執行
 
-* samplewise_center：布爾值，使輸入數據的每個樣本均值為0
+* samplewise_center：布林值，使輸入數據的每個樣本均值為0
 
-* featurewise_std_normalization：布爾值，將輸入除以數據集的標準差以完成標準化, 按feature執行
+* featurewise_std_normalization：布林值，將輸入除以數據集的標準差以完成標準化, 按feature執行
 
-* samplewise_std_normalization：布爾值，將輸入的每個樣本除以其自身的標準差
+* samplewise_std_normalization：布林值，將輸入的每個樣本除以其自身的標準差
 
-* zca_whitening：布爾值，對輸入數據施加ZCA白化
+* zca_whitening：布林值，對輸入數據施加ZCA(數據x先經過PCA變換為z，但是並不降維)白化處理, 目的是去掉數據(像素)之間的相關聯度
 
-* zca_epsilon: ZCA使用的eposilon，預設1e-6
+* zca_epsilon: ZCA使用的eposilon，預設值為1e-6
 
-* rotation_range：整數，數據提升時圖片隨機轉動的角度
+* rotation_range：整數(轉動的角度0~180, 例如: 20)，隨機轉動圖片的角度
 
-* width_shift_range：浮點數，圖片寬度的某個比例，數據提升時圖片水平偏移的幅度
+* width_shift_range：浮點數(圖片寬度的某個比例值0~1, 例如: 0.15)，圖片水平偏移的幅度
 
-* height_shift_range：浮點數，圖片高度的某個比例，數據提升時圖片豎直偏移的幅度
+* height_shift_range：浮點數(圖片高度的某個比例0~1, 例如: 0.15)，圖片垂直偏移的幅度
 
 * shear_range：浮點數，剪切強度（逆時針方向的剪切變換角度）
 
-* zoom_range：浮點數或形如```[lower,upper]```的列表，隨機縮放的幅度，若為浮點數，則相當於```[lower,upper] = [1 - zoom_range, 1 +zoom_range]```
+* zoom_range：浮點數(縮小放大的幅度)或形如```[lower,upper]```的列表，，若為浮點數，則相當於```[lower,upper] = [1 - zoom_range, 1 +zoom_range]```
 
 * channel_shift_range：浮點數，隨機通道偏移的幅度
 
@@ -54,9 +55,9 @@ keras.preprocessing.image.ImageDataGenerator(featurewise_center=False,
 
 * cval：浮點數或整數，當```fill_mode=constant```時，指定要向超出邊界的點填充的值
 
-* horizo​​ntal_flip：布爾值，進行隨機水平翻轉
+* horizo​​ntal_flip：布林值，進行隨機水平翻轉
 
-* vertical_flip：布爾值，進行隨機豎直翻轉
+* vertical_flip：布林值，進行隨機豎直翻轉
 
 * rescale: 重放縮因子,預設為None. 如果為None或0則不進行放縮,否則會將該數值乘到數據上(在應用其他變換之前)
 * preprocessing_function: 將被應用於每個輸入的函數。該函數將在任何其他修改之前運行。該函數接受一個參數，為一張圖片（秩為3的numpy array），並且輸出一個具有相同shape的numpy array
@@ -71,7 +72,7 @@ keras.preprocessing.image.ImageDataGenerator(featurewise_center=False,
 
     * X：numpy array，樣本數據，秩應為4.在黑白圖像的情況下channel軸的值為1，在彩色圖像情況下值為3
 
-    * augment：布爾值，確定是否使用隨即提升過的數據
+    * augment：布林值，確定是否使用隨即提升過的數據
 
     * round：若設```augment=True```，確定要在數據上進行多少輪數據提升，預設值為1
 
@@ -85,7 +86,7 @@ keras.preprocessing.image.ImageDataGenerator(featurewise_center=False,
 
     * batch_size：整數，預設32
 
-    * shuffle：布爾值，是否隨機打亂數據，預設為True
+    * shuffle：布林值，是否隨機打亂數據，預設為True
 
     * save_to_dir：None或字符串，該參數能讓你將提升後的圖片保存起來，用以可視化
 

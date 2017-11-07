@@ -9,11 +9,12 @@ regarding to Keras.
 
 # keras-docs-tw
 
-本項目原始的版本由BigMoyan於2016-4-29發起，旨在建立一個[keras.io](keras.io)的中文版文檔，並提供更多用戶友好的支持與建議。
+本專案旨在建立一個[keras.io](keras.io)的中文版文檔，提供給深度學習開發者對Keras的API參考與相關範例。
+本項目目前已完成2.8版本的轉譯，繁體版文檔網址為[keras-docs-tw](http://eighty20.cc/keras-docs-tw/)。
 
-本項目目前已完成2.x版本，簡體版文檔網址為[keras-cn](http://keras-cn.readthedocs.io/en/latest/)
+簡體版文檔網址為[keras-cn](http://keras-cn.readthedocs.io/en/latest/)是本專案初始轉譯的版本(由BigMoyan於2016-4-29發起)。
 
-項目基於Mkdocs生成靜態網頁
+這個文檔專案是基於Mkdocs來生成靜態網頁
 
 ## 構建文檔
 - 在你/妳的電腦上安裝python與pip
@@ -78,11 +79,11 @@ code
 
 [Markdown](http://markdown.tw/)
 
-## MkDocs中文教程
+## MkDocs簡體中文教程
 
 [MkDocs](http://markdown-docs-zh.readthedocs.io/zh_CN/latest/)
 
-## Keras文檔
+## Keras官方文檔(英文)
 
 [Keras](http://keras.io/)
 
